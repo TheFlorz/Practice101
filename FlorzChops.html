@@ -3,53 +3,149 @@
                             <head>
                                <link rel="icon" type="florzchops.gif" href="img/florzchops.gif">
                                <title>Florz Chops</title>
+                               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3<.3.1/jquery.min.js"></script>
+                               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                            </head>
                            <style type="text/css">
                              body {
                               background-color: peachpuff
                              }
-                            a:class{
-                              column-width: 40%
-                            }
-                            a:class {
-                              height: 30%
-                            }
-                           </style>
-                           <body>
+                             h1 {
+                              text-shadow: black
+                             }
+                             h1,h2,h3,h4 {
+                              color: teal
+                             }
+                             footer { 
+                              color: black
+                         }
+                         </style>
+                         <body>
+                    <!--Navbar-->
+                        <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                        <div class="navbar-header">
+                        <a class="navbar-brand" href="florzchops.html">Florz Chops</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                        <li class="active"><a href="florzchops.html">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                        </ul>
+                        <!--Navbar Form-->
+                          <form class="navbar-form navbar-right" action="/action_page.php">
+                        <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                        </div>
+                        </div>
+                        </form>
+                        </div>
+                        </nav>
                                 <!--Header with image-->
+                                <div>
                               <header>
-                              <p align="center"> <img width="60%" height="40%" src="img/florzchops.gif" alt="FlorzChopz GIF"> </p>
+                              <p align="center"> <img width="60%" height="40%" src="img/florzchops.gif"> </p>
                               </header>
                               <div>
                               <h1><p align="center"> Welcome to Florz Chops </p></h1>
-                             <button> What would you like today </button>
+                             <p align="center"><button class="btn btn-primary btn-lg"> What would you like today </button>
+                             </div>
                                  <!--Intro-->
+                                 <div>
                               <p> A subsidiary of Florz Delicacies, We bring you pocket friendly and delicious small chops. We deliver packages of Samosas, Spring rolls, Puff puff, Gizdodo, Grilled Chicken, Gizzard, and Peppered meat. </p>
                               <p> Like we did with our parent company, we bring to you the state of the art website for your small chops orders and delivery tracking. First of its kind uh? Yesssss!! We strive to be the best for Our esteemed Customer because you guys deserve the best! </p> 
                               </div>
+                              <div class="container-fluid bg-3">
                               <h2> ~ Florz Chops Menu ~ </h2>
                                 <!--Menu items-->
-                              <h3>Spring Rolls</h3>
-                              <img src="img/springroll.jpg" alt="Spring Roll" width="15%" height="10%"/>
+                              <h3 class="display-2">Spring Rolls</h3>
+                              <img src="img/springroll.jpg" alt="Spring Roll" class="img-circle" width="15%" height="10%"/>
                               <p> This goes for #50 per piece </p>
                               <h4>Samosa</h4>
-                              <img src="img/samosa.jpg" alt="Samosa" width="15%" height="10%"/>
+                              <img src="img/samosa.jpg" alt="Samosa" class="img-circle" width="15%" height="10%"/>
                               <p> This goes for #50 per piece </p>
-                              <p> <b> Gizdodo </b> </p>
-                              <img src="img/gizdodo.jpg" alt="Gizdodo" width="15%" height="10%"/>
+                              <p style="color: teal"><b> Gizdodo </b></p>
+                              <img src="img/gizdodo.jpg" alt="Gizdodo" class="img-circle" width="15%" height="10%"/>
                               <p> This goes for #100 per piece </p>
-                              <br>
+                               <p style="color: teal"><b>Grilled Chcken</b></p>
+                               <img src="img/gchicken.jpg" alt="Griled Chicken" class="img-circle" width="15%" height="10%"/>
+                               <p> Our grilled chicken goes for #500 per piece </p>
+                               <p style="color: teal"><b>Peppered Meat</b></p>
+                               <img src="img/pepmeat.jpg" alt="Peppered Meat" class="img-circle" width="15%" height="10%"/>
+                               <p> Our peppered meat goes for #50 per piece </p>
+                               <p> <b> We also have <b>Puff-puff</b>, <b>Peppered Gizzard</b> as well. </b></p>
+                               <p> Yassssss!!This is mouth-watering menu we have specifically created for you our amazing customers, we look foward to receiving your orders for our delicious small chops </p>
+                             </div>
+                             <h1 align="center"> Our Budget Builder </h1>
+                              <p> We have promised affordable, pocket friendly meals and now We bring to you our <b>'Budget Builder'</b> designed to help you plan around your budget because we value our customers and to ensure there's a package for everyone. Isn't nice?? Oh yesss we know it is. </p>
                               <div>
-                              
-                              <a class="twitter-timeline" href="https://twitter.com/The_Florencee?ref_src=twsrc%5Etfw">Tweets_by_The_Florencee</a>
+                              <fieldset class="budget">
+                                <legend>Florz Chops Budget Builder</legend>
+                                <label for="amount_start">Amount</label>
+                                <select id="amount_start">
+                                  <option>#250</option>
+                                  <option>#500</option>
+                                  <option>#750</option>
+                                  <option>#1000</option>
+                                  <option>#1250</option>
+                                  <option>#1500</option>
+                                  <option>#2000</option>
+                                  <option>#2500</option>
+                                  <option>#3000</option>
+                                </select>
+                                <label for="meals_start">Meals</label>
+                                <select id="meals_start">
+                                  <option>Spring Rolls</option>
+                                  <option>Samosa</option>
+                                  <option>Gizdodo</option>
+                                  <option>Peppered Meat</option>
+                                  <option>Puff puff</option>
+                                  <option>Grilled chicken</option>
+                                  <option>peppered gizzard</option>
+                                </select>
+                                <label for="meals_start">Meals</label>
+                                <select id="meals_start">
+                                  <option>Spring Rolls</option>
+                                  <option>Samosa</option>
+                                  <option>Gizdodo</option>
+                                  <option>Peppered Meat</option>
+                                  <option>Puff puff</option>
+                                  <option>Grilled chicken</option>
+                                  <option>peppered gizzard</option>
+                                </select>
+                                <label for="meals_start">Meals</label>
+                                <select id="meals_start">
+                                  <option>Spring Rolls</option>
+                                  <option>Samosa</option>
+                                  <option>Gizdodo</option>
+                                  <option>Peppered Meat</option>
+                                  <option>Puff puff</option>
+                                  <option>Grilled chicken</option>
+                                  <option>peppered gizzard</option>
+                                </select>
+                                <span class="inst">(Amount-Meals-Meals-Meals)</span>
+                                <button class="btn btn-primary btn-lg">Place Your Order</button>
+                              </fieldset>
+                              </div>
+                              <br>
+                              <p align="center" style="color: black"> <b> Florz Delicacies, affordable meals just for your satisfaction...</b></p> 
+                              <br>
+                              <!--Embedded Twitter Profile-->
+                              <div>
+                              <a class="twitter-timeline" href="https://twitter.com/The_Florencee?ref_src=twsrc%5Etfw">Tweets by The_Florencee</a> 
                               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
                               <br>
                                 <footer>
-                                  <a href="http://www.twitter.com/The_Florencee" target="_blank">
-                                       <img src="img/twitter.png" title="twitter" width="75" height="75"/>
+                                   <a href="http://www.twitter.com/The_Florencee" target="_blank">
+                                       <img src="img/twitter.png" title="twitter" class="img-circle" width="75" height="75"/>
                                     </a>
-                                  <p>&copy 2018 Florz Chops. Developed by Florence Ogunbore. </p>
+                                  <p style="text-align: center;">&copy 2018 Florz Chops. Developed by Florence Ogunbore. </p>
                                 </footer>
                               </body>
                             
