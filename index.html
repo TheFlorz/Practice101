@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+                       <head>
+                       	<meta charset="utf-8">
+                       	<meta name="viewport" content="width=device-width, initial scale=1.0">
+                       	<link rel="stylesheet" type="mystyle/css" href="css/mystyle.css">
+                       	<link rel="icon" type="fi1/png" href="img/fi1.png">
+                       	<title>FlorzHosting Inc.</title>
+                       	<style type="text/css">
+                       		/* Navbar container */
+                       		.navbar{
+                       			overflow: hidden;
+                       			background-color: #333;
+                       			font-family: monospace;
+                                  }
+                                /* Links inside the navbar */
+                                  .navbar a {
+                                  float: left;
+                                  font-size: 16px;
+                                  color: white;
+                                  padding-top: 10px;
+                                  padding-bottom: 9px;
+                                  text-decoration: none;
+                                  text-align: center;
+                                  margin-left: 12px;
+                                  }
+                                  /* Dropdown container */
+                                  .dropdown{
+                                  	float: right;
+                                  	overflow: hidden;
+                                  }
+                                  /* Dropdown button */
+                                  .dropdown, .dropbtn{
+                                  	font-size: 16px;
+                                  	border: none;
+                                  	outline: none;
+                                  	color: white;
+                                  	padding-top: 10px;
+                                  	padding-bottom: 8px;
+                                  	background-color: inherit;
+                                  	font-family: inherit;
+                                  	margin-right: 15px; /*important for vertical align on mobile phones*/
+                                  }
+                                  .navbar a:hover, .dropdown:hover .dropbtn{
+                                  	background-color: blue;
+                                  }
+                                  /* Dropdown content(hidden by default) */
+                                  .dropdown-content{
+                                  	display: none;
+                                  	position: absolute;
+                                  	background-color: #f9f9f9;
+                                  	min-width: 160px;
+                                  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+                                  	z-index: 1;
+                                  }
+                                  /* Links inside the dropdown */
+                                  .dropdown-content a {
+                                  	float: none;
+                                  	color: black;
+                                  	text-decoration: none;
+                                  	text-align: right;
+                                  	display: inline-block;
+                                  }
+                                  /* Grey background color to dropdown links on hover*/
+                                  .dropdown-content a:hover{
+                                  	background-color: grey;
+                                  }
+                                  /* show the dropdown menu on hover */
+                                  .dropdown:hover .dropdown-content{
+                                  	display: inline-block;
+                                  }
+                                  .hero-image{
+                                  	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/fi2.png);
+                                  	background-position: center;
+                                  	background-repeat: no-repeat-repeat;
+                                  	background-size: cover;
+                                  	position: relative;
+                                  	width: 100vw;
+                                  	height: 50vh;
+                                  }
+                                  .hero-text{
+                                  	font-style: oblique;
+                                  	font-weight: bolder;
+                                  	color: white;
+                                  	text-align: center;
+                                  	padding-top: 6px;
+                                  }
+                                  .form{
+                                  	text-align: center;
+                                  	padding-top: 40px;
+                                    padding-bottom: 40px;
+                                  }
+                                  .list, .l{
+                                    padding-top: 15px;
+                                    padding-bottom: 10px;
+                                  }
+                                  .k{
+                                  	margin-left: 1em;
+                                  	font-style: italic;
+                                  	padding-top: 10px;
+                                  }
+                                  .content{
+                                  	margin-left: 5px;
+                                  }
+                                  .n{
+                                    padding-top: 20px;
+                                  }
+                                  .m{
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                    margin-left: 4em;
+                                  }
+                                  .t{
+                                    margin-left: 5px;
+                                  }
+                                  .con{
+                                    margin-left: 5px;
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                  }
+                                .me{
+                                    text-align: center;
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                  }
+                                  .d{
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                  }
+                                /* Slideshow Container */
+                                  .container{
+                                    position: relative;
+                                    background: #f1f1f1f1;
+                                  }
+                                  /* Slides */
+                                  .myslides{
+                                        display: none;
+                                        padding: 80px;
+                                        text-align: center;
+                                  }
+                                  /* Next/Prev buttons */
+                                  .prev, .next{
+                                        cursor: pointer;
+                                        position: absolute;
+                                        top: 50%;
+                                        width: auto;
+                                        margin-top: -30px;
+                                        padding: 16px;
+                                        color: #888;
+                                        font-weight: bold;
+                                        font-size: 20px;
+                                        border-radius: 0 3px 3px 0;
+                                        user-select: none;
+                                  }
+                                  /*Positioning the next button to the right*/
+                                  .next{
+                                        position: absolute;
+                                        right: 0;
+                                        border-radius: 3px 0 0 3px;
+                                  }
+                                  /* On hover, a black blackground color with a little see through */
+                                  .prev:hover, .next:hover{
+                                        background-color: rgba(0,0,0,0.6);
+                                        color: white;
+                                  }
+                                  /* The dot/indicator container */
+                                  .dot-container{
+                                        text-align: center;
+                                        padding: 20px;
+                                        background: #ddd;
+                                  }
+                                  /*Dot/indicators*/
+                                  .dot{
+                                        cursor: pointer;
+                                        height: 15px;
+                                        width: 15px;
+                                        margin: 0 2px;
+                                        background-color: #bbb;
+                                        border-radius: 50%;
+                                        display: inline-block;
+                                        transition: background-color 0.6s ease;
+                                  }
+                                  /*background-color to the active dot/circle*/
+                                  .active, .dot:hover{
+                                        background-color: #717171;
+                                  }
+                                  /*Fontstyles to quotes*/
+                                  q{
+                                        font-style: italic;
+                                  }
+                                  .price{
+                                        color: green;
+                                  }
+                                  
+                       	  </style>
+                        <script type="text/javascript">
+                           function currentSlide(n) {
+                              showSlides(slideindex =n);
+                            }
+                            function showSlides(n) {
+                              var i;
+                              var slides = 
+                              document.getElementByClassName('myslides');
+                              var dots = 
+                              document.getElementByClassName('myslides');
+                              if (n > slides.length) {slideindex =1}
+                                if (n < 1) {slideindex = slides.length}
+                                  for (var i = 0; i < slide.length; i++) {
+                                    slide[i].style.display ="none";
+                                  }
+                                  for (var i = 0; i < dots.length; i++) {
+                                    dotsvar slideindex =1;
+                            showSlides(slideindex);
+                            function plusSlides(n) {
+                              showSlides(slideindex += n);
+                            }
+                            [i].className.replace(" active", "");
+                                  }
+                                  slides[slideindex-1].style.display = "block";
+                                  dots[slideindex-1].className +="active";
+                            }
+                        </script>
+                          </head>
+                           <body>
+                           	<!--Navbar & Dropdown-->
+                       	      <div class="navbar">
+                       	      	<a href="index.html">Home</a>
+                       	      	&nbsp; &nbsp; &nbsp;
+                       	      	<a href="about.html">About</a>
+                       	      	<div class="dropdown">
+                       	      	<button class="dropbtn">Dropdown
+                       	        <i class="fa fa-caret-down"></i>
+                       	      	</button>
+                       	      	<div class="dropdown-content">
+                       	      	<a href="menu.html">Shop Now</a>
+                       	      	<a href="webhosting.html">Web Hosting</a>
+                       	      	<a href="domain.html">Domains</a>
+                       	      	<a href="contact.html">Contact Us</a>
+                       	      	</div>
+                       	      	</div>
+                       	      </div> 
+                       	      <!--Hero image/text-->
+                       	      <div class="hero-image">
+                                  <div class="hero-text">
+                                  <h1>FlorzHosting Inc.</h1>
+                                  <br>
+                                  <p style="font-size: 150%">Convinence at your finger tips...</p>
+                                  <br>
+                                  <div class="l">
+                                  <button>Click here to shop now</button>
+                                </div>
+                                <div style="display: inline-block;" class="list">
+                                		<ul style="float: left;">
+                                		<li><b>Large Traffic</b></li>
+                                		<li><b>Free Domains</b></li>
+                                		</ul>
+                                		<ul style="float: left;">
+                                			<li><b>Shared Hosting</b></li>
+                                			<li><b>Domain Auction</b></li>
+                                		</ul>
+                                	
+                                </div>
+                                </div>
+                                </div>
+                                <!--Brief about FlorzHosting Inc.-->
+                                <div class="k">
+                                <h1>Welcome to FlorzHosting Inc.</h1>
+                            </div>
+                            <div class="content">
+                                <p>FlorzHosting brings to cheap and standardized web hosting rates, reliable and stress free webhosting features. As a dedicated hosting company, We bring the convinence to your finger tips. </p>
+                                <p>From as low as #3,000- Free .COM.NG Domain, 1GB Disk Space, 4GB Bandwidth, Unltd, Emails & FREE SSL.</p>
+                                <div class="con">
+                                <p><b>Linus OS, Wordpress, Joomla, SSL, MySQL, Web Security Ready.</b></p>
+                              </div>
+                            </div>
+                            <!--Domain search form-->
+                                <div class="form">
+                                 <form>
+                          <input type="text" placeholder="Enter Domain name" name="sear
+                            </div>ch">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                            </div>
+                            <!--Slidesow Container-->
+                            <div class="container">
+                            <!--Menu Slideshow-->
+                              <div class="myslides">
+                              	<p>2nd Officer</p>
+                              	<q>10 Free Domains, 2500MB Disk space, 10 Email Accounts, 5 Database, 7GB Monthly Bandwidth</q>
+                              	<p class="price">#750/Month</p>
+                              	<button class="btn">SHOP NOW</button>
+                              </div>
+                              <div class="myslides">
+                              	<p>1st Officer</p>
+                              	<q>25 Free Domains, 5000MB Disk space, 20 Email Accounts, 10 Databases, 10GB Monthly Bandwidth</q>
+                              	<p class="price">#2000/Month</p>
+                              	<button class="btn">SHOP NOW</button>
+                              </div>
+                              <div class="myslides">
+                              <p>Captain</p>
+                              	<q>50 Free Domains, 10000MB Disk space, Unlimited Email Accounts, 20 Databases, 20GB Monthly Bandwidth</q>
+                              	<p class="price">#5000/Monthly</p>
+                              	<button class="btn">SHOP NOW</button>
+                              </div>
+                              <!--Next/Prev buttons-->
+                              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                          </div>
+                          <!--Dots/Indicators-->
+                          <div class="dot-container">
+                          	<span class="dot" onclick="currentSlide(1)"></span>
+                          	<span class="dot" onclick="currentSlide(2)"></span>
+                          	<span class="dot" onclick="currentSlide(3)"></span>
+                          </div>
+                          <div class="n">
+                            <p class="t"> If you have domains to Auction, click the button below</p>
+                            <button class="m">Auction Now</button>
+                          </div>
+                           <div class="con">
+                          <p><b>At FlorzHosting Inc, We ensure 99.9% online availabilty, VPS control panel access and maximum Web Security</b></p>
+                        </div>
+                        <div class="me">
+                          <img src="img/fi3.jpg" alt="FlorzHosting flyer" width="40%" height="30%">
+                        </div>
+                        <footer>
+                          <div style="font-style: oblique;" class="con">
+                          <p>Designed by: Florence Ogunbore</p>
+                          <p>Contact information: <a href="mailto:mzflawrens@gmail.com">Mzflawrens@gmail.com</a></p>
+                        </div>
+                        <div class="d">
+                           <a href="http://www.twitter.com/The_Florencee" target="_blank">
+                                       <img src="img/twitter.png" title="twitter" class="img-circle" width="75" height="75">
+                                    </a>
+                                    <a href="http://m.facebook.com/florence.ogunbore1" target="_blank">
+                                      <img src="img/fb.png" title="facebook" class="img-circle" width="75" height="75">
+                                    </a>
+                                  </div>
+                                  </footer>
+                                  <p style="text-align: center;">&copy 2018 FlorzHosting Inc. Developed by Florence Ogunbore. </p>
+                        </footer>
+                       </body>
